@@ -1,0 +1,13 @@
+.list {
+  list-style: none;
+  width: 90%;
+
+  .item {
+    display: inline-block;
+    margin: 5px;
+
+    .link {
+      color: #fff;
+    }
+  }
+}

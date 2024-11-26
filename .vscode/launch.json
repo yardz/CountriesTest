@@ -1,0 +1,27 @@
+{
+  "version": "0.2.0",
+  "compounds": [
+    {
+      "name": "Debug All",
+      "configurations": ["Debug Frontend", "Debug Backend"]
+    }
+  ],
+  "configurations": [
+    {
+      "name": "Debug Frontend",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://localhost:3000/login",
+      "webRoot": "${workspaceFolder}/apps/frontend"
+    },
+    {
+      "name": "Debug Backend",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/apps/backend/src/main.ts",
+      "outFiles": ["${workspaceFolder}/dist/**/*.js"],
+      "preLaunchTask": "Yarn Dev",
+      "sourceMaps": true
+    }
+  ]
+}
